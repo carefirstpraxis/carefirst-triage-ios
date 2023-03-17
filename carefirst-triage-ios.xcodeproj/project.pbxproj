@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01135DFB29C42E3B00402AEC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01135DFA29C42E3B00402AEC /* MainView.swift */; };
 		012CB92929C250E700399F45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012CB92829C250E700399F45 /* LoginView.swift */; };
 		01EAF22829B598BE005EFD88 /* carefirst_triage_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAF22729B598BE005EFD88 /* carefirst_triage_iosApp.swift */; };
-		01EAF22A29B598BE005EFD88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAF22929B598BE005EFD88 /* ContentView.swift */; };
 		01EAF22C29B598BE005EFD88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EAF22B29B598BE005EFD88 /* Assets.xcassets */; };
 		01EAF22F29B598BE005EFD88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EAF22E29B598BE005EFD88 /* Preview Assets.xcassets */; };
 		01EAF23129B598BE005EFD88 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAF23029B598BE005EFD88 /* Persistence.swift */; };
@@ -17,11 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01135DFA29C42E3B00402AEC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		012CB92829C250E700399F45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0182E28929B6E4ED005C99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		01EAF22429B598BE005EFD88 /* carefirst-triage-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carefirst-triage-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EAF22729B598BE005EFD88 /* carefirst_triage_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carefirst_triage_iosApp.swift; sourceTree = "<group>"; };
-		01EAF22929B598BE005EFD88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01EAF22B29B598BE005EFD88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01EAF22E29B598BE005EFD88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01EAF23029B598BE005EFD88 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -60,12 +60,12 @@
 			children = (
 				0182E28929B6E4ED005C99F8 /* Info.plist */,
 				01EAF22729B598BE005EFD88 /* carefirst_triage_iosApp.swift */,
-				01EAF22929B598BE005EFD88 /* ContentView.swift */,
 				01EAF22B29B598BE005EFD88 /* Assets.xcassets */,
 				01EAF23029B598BE005EFD88 /* Persistence.swift */,
 				01EAF23229B598BE005EFD88 /* carefirst_triage_ios.xcdatamodeld */,
 				01EAF22D29B598BE005EFD88 /* Preview Content */,
 				012CB92829C250E700399F45 /* LoginView.swift */,
+				01135DFA29C42E3B00402AEC /* MainView.swift */,
 			);
 			path = "carefirst-triage-ios";
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01EAF23129B598BE005EFD88 /* Persistence.swift in Sources */,
-				01EAF22A29B598BE005EFD88 /* ContentView.swift in Sources */,
 				01EAF22829B598BE005EFD88 /* carefirst_triage_iosApp.swift in Sources */,
 				012CB92929C250E700399F45 /* LoginView.swift in Sources */,
+				01135DFB29C42E3B00402AEC /* MainView.swift in Sources */,
 				01EAF23429B598BE005EFD88 /* carefirst_triage_ios.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
