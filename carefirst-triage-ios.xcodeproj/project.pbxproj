@@ -33,6 +33,8 @@
 		0143E0AA2A0C418C0033769C /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0143E09A2A0C418C0033769C /* MeetingFooterView.swift */; };
 		0143E0AB2A0C418C0033769C /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0143E09B2A0C418C0033769C /* ScrumProgressViewStyle.swift */; };
 		0143E0AC2A0C418C0033769C /* SpeakerArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0143E09C2A0C418C0033769C /* SpeakerArc.swift */; };
+		01E0935A2A2E8F06008664B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E093592A2E8F06008664B1 /* Constants.swift */; };
+		01E0935C2A2E8F3B008664B1 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E0935B2A2E8F3B008664B1 /* NavigationView.swift */; };
 		01EAF22829B598BE005EFD88 /* carefirst_triage_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAF22729B598BE005EFD88 /* carefirst_triage_iosApp.swift */; };
 		01EAF22C29B598BE005EFD88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EAF22B29B598BE005EFD88 /* Assets.xcassets */; };
 		01EAF22F29B598BE005EFD88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EAF22E29B598BE005EFD88 /* Preview Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		0143E09B2A0C418C0033769C /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
 		0143E09C2A0C418C0033769C /* SpeakerArc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerArc.swift; sourceTree = "<group>"; };
 		0182E28929B6E4ED005C99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01E093592A2E8F06008664B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01E0935B2A2E8F3B008664B1 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		01EAF22429B598BE005EFD88 /* carefirst-triage-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carefirst-triage-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EAF22729B598BE005EFD88 /* carefirst_triage_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carefirst_triage_iosApp.swift; sourceTree = "<group>"; };
 		01EAF22B29B598BE005EFD88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		01EAF21B29B598BE005EFD88 = {
 			isa = PBXGroup;
 			children = (
+				01E0935B2A2E8F3B008664B1 /* NavigationView.swift */,
 				01EAF22629B598BE005EFD88 /* carefirst-triage-ios */,
 				01EAF22529B598BE005EFD88 /* Products */,
 			);
@@ -154,6 +159,7 @@
 				01EAF22D29B598BE005EFD88 /* Preview Content */,
 				012CB92829C250E700399F45 /* LoginView.swift */,
 				01135DFA29C42E3B00402AEC /* MainView.swift */,
+				01E093592A2E8F06008664B1 /* Constants.swift */,
 			);
 			path = "carefirst-triage-ios";
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				0143E0AB2A0C418C0033769C /* ScrumProgressViewStyle.swift in Sources */,
 				0143E0AC2A0C418C0033769C /* SpeakerArc.swift in Sources */,
 				0143E0A72A0C418C0033769C /* DetailView.swift in Sources */,
+				01E0935A2A2E8F06008664B1 /* Constants.swift in Sources */,
 				0143E0A42A0C418C0033769C /* ThemeView.swift in Sources */,
 				0143E0A12A0C418C0033769C /* ScrumsView.swift in Sources */,
 				01EAF23129B598BE005EFD88 /* Persistence.swift in Sources */,
@@ -253,6 +260,7 @@
 				0143E09E2A0C418C0033769C /* NewScrumSheet.swift in Sources */,
 				0143E0A92A0C418C0033769C /* MeetingView.swift in Sources */,
 				0143E08B2A0C41600033769C /* ScrumTimer.swift in Sources */,
+				01E0935C2A2E8F3B008664B1 /* NavigationView.swift in Sources */,
 				012CB92929C250E700399F45 /* LoginView.swift in Sources */,
 				0143E09D2A0C418C0033769C /* DetailEditView.swift in Sources */,
 				0143E0A22A0C418C0033769C /* HistoryView.swift in Sources */,
