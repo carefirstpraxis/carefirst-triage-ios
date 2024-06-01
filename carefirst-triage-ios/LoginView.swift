@@ -81,57 +81,50 @@ struct LoginView: View {
   }
   
   
-  func handleSubmit() {
-    if (!validate()) {
-      return
-    }
-    guard let url = URL(string: "http://192.168.86.29:8080/cfpm/app/login") else {
-      return
-    }
-
-    var request = URLRequest(url: url)
-    request.httpMethod = "POST"
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
-    
-    let body: [String: AnyHashable] = [
-      "username": username,
-      "password": password,
-      "clientType": "user",
-      "module": "pm"
-    ]
-    // let data = ["data": body]
-    print("CALLING LOGIN: \(body)")
-    request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-    
-    let task = URLSession.shared.dataTask(with: request) { data, _, error in
-      guard let data = data, error == nil else {
+    func handleSubmit() {
+      if (!validate()) {
         return
       }
-      do {
-        let response: Response = try JSONDecoder().decode(Response.self, from: data)
-        print("DATA: \(data)")
-        print("SUCCESS: \(response)")
-        let authStatus = response.result.authStatus
-        print("authStatus: \(authStatus)")
-          
-        if authStatus == AUTH_STATUS.AUTHENTICATED {
-          DispatchQueue.main.async {
-            screens.currentScreen = 2
+      guard let url = URL(string: "http://192.168.86.250:8080/cfpm/app/login") else {
+        return
+      }
+
+      var request = URLRequest(url: url)
+      let queryItems = [URLQueryItem(name: "data", value: "{\"username\":\(username),\"password\":\(password),\"clientType\":\"user\",\"module\":\"pm\"}"),]
+      var urlComponents = URLComponents(string: "")
+      urlComponents?.queryItems = queryItems
+      let request_body = urlComponents!.query!
+      request.httpBody = Data(request_body.utf8)
+      request.httpMethod = "POST"
+      request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+      let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        guard let data = data, error == nil else {
+          return
+        }
+        do {
+          print("DATA: \(data)")
+          let response: Response = try JSONDecoder().decode(Response.self, from: data)
+          print("SUCCESS: \(response)")
+          let authStatus = response.client.authStatus
+          print("authStatus: \(authStatus)")
+            
+          if authStatus == AUTH_STATUS.AUTHENTICATED {
+            DispatchQueue.main.async {
+              screens.currentScreen = 2
+            }
+          }
+          else {
+            submitError = "Invalid login"
           }
         }
-        else {
-          submitError = "Invalid login"
+        catch {
+          submitError = "Invalid Server Response"
+          print("ERROR: \(error)")
         }
       }
-      catch {
-        submitError = "Invalid login"
-        print(error)
-      }
+      task.resume()
     }
-    task.resume()
-    
-  }
   
   
   func validate() -> Bool {
@@ -185,13 +178,12 @@ struct LoginButtonContent : View {
 }
 
 struct Response: Codable {
-  let error: JSONNull?
-  let result: Result
+  let authenticated: Bool
+  let clientType: String
+  let client: Client
 }
 
-struct Result: Codable {
-  let id: Int
-  let username, salt, password: String
+struct Client: Codable {
   let authStatus: Int
 }
 
